@@ -8,4 +8,4 @@ jobs:
     uses: takutakahashi/github-actions/.github/workflows/ghcr.yaml@main
     with:
       path: pvr-base
-      image: pvr-base:latest
+      image: takutakahashi/pvr-base:latest
