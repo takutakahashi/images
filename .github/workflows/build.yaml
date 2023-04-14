@@ -7,5 +7,5 @@ jobs:
   build:
     uses: takutakahashi/github-actions/.github/workflows/ghcr.yaml@main
     with:
-      path: dvr-base
-      image: dvr-base:latest
+      path: pvr-base
+      image: pvr-base:latest
