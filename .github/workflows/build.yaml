@@ -8,12 +8,12 @@ jobs:
     uses: takutakahashi/github-actions/.github/workflows/ghcr.yaml@main
     with:
       path: pvr-base
-      image: takutakahashi/pvr-base:latest
+      image: takutakahashi/pvr-base:${{ github.sha }}
   test:
     needs: build
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/takutakahashi/pvr-base:latest
+      image: ghcr.io/takutakahashi/pvr-base:${{ github.sha }}
     steps:
       -
         run: /px4.sh
