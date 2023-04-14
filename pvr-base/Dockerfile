@@ -8,7 +8,7 @@ RUN cd fwtool \
   && make \
   && wget http://plex-net.co.jp/download/202104_PX-W3U4_Driver.zip \
   && unzip 202104_PX-W3U4_Driver.zip \
-  && cd 202104_PX-W3U4_Driver/x64/ \
+  && cp 202104_PX-W3U4_Driver/x64/PXW3U4.sys . \
   && ./fwtool PXW3U4.sys it930x-firmware.bin
 
 ADD px4.sh /
