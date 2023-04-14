@@ -9,3 +9,10 @@ jobs:
     with:
       path: pvr-base
       image: takutakahashi/pvr-base:latest
+  test:
+    container:
+      image: ghcr.io/takutakahashi/pvr-base:latest
+    steps:
+      -
+        run: /px4.sh
+
