@@ -10,6 +10,7 @@ jobs:
       path: pvr-base
       image: takutakahashi/pvr-base:latest
   test:
+    runs-on: ubuntu-latest
     container:
       image: ghcr.io/takutakahashi/pvr-base:latest
     steps:
