@@ -1,0 +1,11 @@
+name: "build all"
+
+on:
+  push:
+
+jobs:
+  build:
+    uses: takutakahashi/github-actions/.github/workflows/ghcr.yaml@main
+    with:
+      path: dvr-base
+      image: dvr-base:latest
