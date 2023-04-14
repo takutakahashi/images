@@ -1,5 +1,5 @@
 FROM ubuntu
-RUN apt update && apt install -y build-essential unzip wget git
+RUN apt update && apt install -y build-essential unzip wget git kmod
 
 
 RUN git clone https://github.com/nns779/px4_drv.git
