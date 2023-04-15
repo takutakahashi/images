@@ -14,5 +14,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       -
-        run: docker run --privileged -v /lib/firmware:/lib/firmware /lib/modules:/lib/modules ghcr.io/takutakahashi/pvr-base:${{ github.sha }}
+        run: docker run --privileged -v /lib/firmware:/lib/firmware -v /lib/modules:/lib/modules ghcr.io/takutakahashi/pvr-base:${{ github.sha }}
 
