@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM debian:buster
 RUN apt update && apt install -y build-essential unzip wget git kmod autoconf automake
 
 
