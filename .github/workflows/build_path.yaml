@@ -1,0 +1,15 @@
+name: "build"
+
+on:
+  workflow_dispatch:
+    inputs:
+      path:
+        type: string
+        required: true
+
+jobs:
+  build:
+    uses: takutakahashi/github-actions/.github/workflows/ghcr.yaml@main
+    with:
+      path: ${{ inputs.path }}
+      image: takutakahashi/${{ inputs.path }}:${{ github.sha }}
