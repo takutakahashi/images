@@ -3,7 +3,7 @@ RUN apt update && apt install -y build-essential unzip wget git kmod autoconf au
 
 WORKDIR /recpt1
 RUN git clone https://github.com/stz2012/libarib25.git \
-  && cd libarb25 \
+  && cd libarib25 \
   && cmake . \
   && make \
   && make install
