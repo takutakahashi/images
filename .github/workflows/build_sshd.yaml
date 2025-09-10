@@ -32,4 +32,4 @@ jobs:
         with:
           context: ./sshd
           push: true
-          tags: ghcr.io/takutakahashi/sshd:${{ github.sha }}
+          tags: ghcr.io/takutakahashi/images/sshd:${{ github.sha }}
