@@ -1,0 +1,19 @@
+name: "build sshd"
+
+on:
+  push:
+    paths:
+      - 'sshd/**'
+      - '.github/workflows/build_sshd.yaml'
+  pull_request:
+    paths:
+      - 'sshd/**'
+      - '.github/workflows/build_sshd.yaml'
+
+jobs:
+  build:
+    uses: takutakahashi/github-actions/.github/workflows/ghcr.yaml@main
+    with:
+      path: sshd
+      image: takutakahashi/sshd:${{ github.sha }}
+    secrets: inherit
