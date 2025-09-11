@@ -7,14 +7,11 @@ if [ -n "$INITIAL_USER" ]; then
     
     # Check if user already exists
     if ! id "$INITIAL_USER" &>/dev/null; then
-        # Create user with home directory and bash shell
-        useradd -m -s /bin/bash "$INITIAL_USER"
+        # Create group with same name as user
+        groupadd "$INITIAL_USER"
         
-        # Set a default password (same as username)
-        echo "$INITIAL_USER:$INITIAL_USER" | chpasswd
-        
-        # Add user to sudo group
-        usermod -aG sudo "$INITIAL_USER"
+        # Create user with home directory, bash shell, and primary group
+        useradd -m -s /bin/bash -g "$INITIAL_USER" "$INITIAL_USER"
         
         echo "User $INITIAL_USER created successfully"
     else
