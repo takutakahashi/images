@@ -5,6 +5,7 @@ ENV INITIAL_USER=""
 
 RUN apt-get update && apt-get install -y \
     openssh-server \
+    curl \
     sudo \
     libpam-script \
     && rm -rf /var/lib/apt/lists/* \
